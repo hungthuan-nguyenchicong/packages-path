@@ -1,0 +1,9 @@
+{
+    "name": "vendor-path/packages-path",
+    "description": "Packages Path Wordpress + Laravel",
+    "autoload": {
+        "psr-4": {
+            "Vendorpath\\Wp\\": "wp"
+        }
+    }
+}
