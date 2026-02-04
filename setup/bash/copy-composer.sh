@@ -15,6 +15,6 @@ cp "$SOURCE_FILE" "$TARGET_FILE"
     
     # cd laravel-app
     cd "$RUN_LARAVEL" || exit
-    composer update vendor-path/packages-src --prefer-source
+    composer update vendor-path/packages-path --prefer-source
 )
 echo "Copy:: $SOURCE_FILE -> $TARGET_FILE"
