@@ -11,6 +11,8 @@ export RUN_LARAVEL=$(cd -- "$ROOT_LARAVEL_APP/laravel-app" && pwd)
 
 # run bash
 
+# copy .env
+bash "$ROOT_PATH/setup/bash/copy-env.sh"
 # copy composer.js
 bash "$ROOT_PATH/setup/bash/copy-composer.sh"
 # copy providers
