@@ -7,3 +7,5 @@ Route::get('/', function() {
 });
 
 Route::get('/category/{slug}', [\Vendorpath\Wp\Categories\CategoryController::class, 'show']);
+// posts
+Route::get('/{slug}', [\Vendorpath\Wp\Posts\PostController:: class, 'show']);
