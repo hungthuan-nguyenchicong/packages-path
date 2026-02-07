@@ -9,6 +9,6 @@ class CategoryController extends Controller
     public function show($slug, CategoryService $service)
     {
         $data = $service->service($slug);
-        return view('wp-view::category', ['cat' => (object) $data]);
+        return view('wp-view::category', $data);
     }
 }

@@ -1,4 +1,7 @@
 <div class="list-group">
+    <a href="/category/thung-rac" class="list-group-item list-group-item-action">Cat Thung rac</a>
+
+
   <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
   
   <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
