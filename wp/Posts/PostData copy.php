@@ -14,13 +14,9 @@ class PostData
 
     public static function fromModel($post): self
     {
-        $repeat = [
-            'title' => (string) data_get($post, 'title', ''),
-            'post' => $post
-        ];
         return new self(
-            title: $repeat['title'],
-            breadcrumb: self::breadcrumb($repeat),
+            breadcrumb: self::breadcrumb($post),
+            title: (string) data_get($post, 'title', ''),
             content: (string) self::cleanContent($post),
             keywords: self::extractKeywords($post),
             schemaJsonLd: self::generateJsonLd($post)
@@ -31,10 +27,10 @@ class PostData
      * breadcrumb
      */
 
-    private static function breadcrumb($repeat): array
+    private static function breadcrumb($post): array
     {
         $breadcrum =[];
-        $categories = data_get($repeat['post'], 'terms.category', []);
+        $categories = data_get($post, 'terms.category', []);
         // 1. Duyệt qua các category để tạo URL mong muốn
         if ($categories) {
             foreach($categories as $slug => $name) {
@@ -44,9 +40,9 @@ class PostData
         }
 
         // 2. Lấy title của bài viết hiện tại
-        // $post_title = data_get($post, 'title', 'Untitled');
+        $post_title = data_get($post, 'title', 'Untitled');
         // 3. Gộp mảng category và item active cuối cùng
-        $breadcrum[] = ['active' => $repeat['title']];
+        $breadcrum[] = ['active' => $post_title];
 
         return $breadcrum;
     }

@@ -1,6 +1,8 @@
-<x-wp-comp::layout>
-    <x-slot name="title">
-        Trang index
-    </x-slot>
+@php
+    $seo = (object) [
+        'title' => 'Index',
+    ];
+@endphp
+<x-wp-comp::layout :seo="$seo">
     <h1>Trang index</h1>
 </x-wp-comp::layout>
