@@ -9,5 +9,6 @@ class WpAggregateServiceProvider extends AggregateServiceProvider
     protected $providers = [
         \Vendorpath\Wp\WpServiceProvider::class,
         \Corcel\Laravel\CorcelServiceProvider::class,
+        \Vendorpath\Wp\Posts\PostServiceProvider::class,
     ];
 }

@@ -5,7 +5,7 @@ namespace Vendorpath\Wp\Posts;
  {
     public function service($slug)
     {
-        $postModel = app(PostLoader::class)->getPost($slug);
+        $postModel = app(Loader\PostLoader::class)->getPost($slug);
         return [
             'post' => PostData::fromModel($postModel['post']),
             'data' => $postModel

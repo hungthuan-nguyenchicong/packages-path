@@ -1,10 +1,7 @@
 <x-wp-comp::layout :breadcrumb="$post->breadcrumb">
-    {{ debug($post->breadcrumb) }}
+    {{-- {{ debug($post->breadcrumb) }} --}}
     {{ debug($post) }}
-    {{ debug($data['post']) }}
-    {{ debug($data['post']->thumbnail->attachment) }}
-    {{ debug($data['post']->seo_title) }}
-
+    {{ debug($data) }}
 
     <p>wp/views/post.blade.php</p>
     {!! $post->content !!}

@@ -46,4 +46,5 @@ class PostLoader extends Post
             'post' => $post
         ];
     }
+    
 }
